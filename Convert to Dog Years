@@ -1,0 +1,27 @@
+/* Convert human years to dog years.
+The first two years of a dog’s life count as 10.5 dog years each.
+Each year following equates to 4 dog years. */
+
+// User enters age here
+const myAge = 24;
+
+//The first two years of a dogs life count as 10.5 dog years each
+let earlyYears = 2;
+
+earlyYears *= 10.5;
+
+// Later years is anything past the the first two years of a dogs life
+let laterYears = myAge - 2;
+
+// Calculates the number of dog years accounted for by your later years
+laterYears *= 4; 
+
+// Add together the early years and later years to get your age in dog years
+let myAgeInDogYears = earlyYears + laterYears
+
+// Converts user's name to all lower case letters
+myName = 'Andreea'.toLowerCase()
+
+// Prints how old use is in humans and in dog years.
+console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`)
+
