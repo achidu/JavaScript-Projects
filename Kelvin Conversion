@@ -1,0 +1,22 @@
+// Enter the degrees in Kelvin you wish to convert to Celsius, Fahrenheit and Newton
+const kelvin = 0;
+
+// Celsius is 273 degrees less then Kelvin
+let celsius = kelvin - 273;
+console.log(`The temperature is ${celsius} degrees Celsius.`)
+
+// Convert Celsius to Fahrenheit
+let fahrenheit = celsius * (9/5) + 32
+
+// Round the Fahrenheit temperature down to a whole number
+fahrenheit = Math.floor(fahrenheit)
+
+console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`)
+
+// Convert Celsius to Newton
+let newton = celsius * (33/100)
+
+newton = Math.floor(newton)
+
+console.log(`The temp is ${newton} degrees Newton.`)
+
