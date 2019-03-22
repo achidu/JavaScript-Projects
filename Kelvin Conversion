@@ -1,4 +1,6 @@
-// Enter the degrees in Kelvin you wish to convert to Celsius, Fahrenheit and Newton
+// Program that converts Kelvin to Celsius, Fahrenheit and Newton
+
+// Enter the degrees in Kelvin you wish to convert
 const kelvin = 0;
 
 // Celsius is 273 degrees less then Kelvin
