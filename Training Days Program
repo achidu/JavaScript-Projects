@@ -1,4 +1,6 @@
-# Selects an event at random
+// This program assigns an event randomly to an athlete, then tells them how many days they have to train for that event
+
+// Selects an event at random
 const getRandEvent = () => {
   const random = Math.floor(Math.random() * 3);
   if (random === 0) {
@@ -11,7 +13,7 @@ const getRandEvent = () => {
 };
 
 
-# Returns the number of days to train based on the event selected randomly above
+// Returns the number of days to train based on the event selected randomly above
 const getTrainingDays = event => {
 	let days
   if (event === 'Marathon') {
@@ -25,33 +27,33 @@ const getTrainingDays = event => {
   return days;
 };
 
-# First athlete
+// First athlete
 const name = 'Nala';
 
-# Prints string with athlete's name and their event when function is called
+// Prints string with athlete's name and their event when function is called
 const logEvent = (event, name) => {
   console.log(`${name}'s event is: ${event}`);
 };
 
-# Prints string with athlete's name and the number of days until their event when function is called
+// Prints string with athlete's name and the number of days until their event when function is called
 const logTime = (days, name) => {
   console.log(`${name}'s time to train is: ${days} days`);
 };
 
-# Save values returned from these functions into variables
+// Save values returned from these functions into variables
 const event = getRandEvent();
 const days = getTrainingDays(event);
 
 
-# Prints the first athlete's name, event, and number of days to the console
+// Prints the first athlete's name, event, and number of days to the console
 logEvent(event, name);
 logTime(days, name);
 
-# Second athlete
+// Second athlete
 const event2 = getRandEvent();
 const days2 = getTrainingDays(event2);
 const name2 = 'Warren';
 
-# Prints the second athlete's name, event, and number of days to the console
+// Prints the second athlete's name, event, and number of days to the console
 logEvent(event2, name2);
 logTime(days2, name2);
