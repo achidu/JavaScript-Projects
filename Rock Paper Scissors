@@ -1,0 +1,72 @@
+// Rock , Paper, Scissors game against the computer
+
+// Convert user input to lower case
+const getUserChoice = userInput => {
+  userInput = userInput.toLowerCase();
+  
+  if (userInput === 'bomb' || userInput === 'rock' || userInput === 'scissors' || userInput === 'paper') {
+    return userInput
+  } else {
+    console.log('Please enter a valid choice: Rock, Paper or Scissors.')
+  }
+};
+
+const getComputerChoice = () => {
+	let randomNumber = Math.floor(Math.random() * 3 )
+  
+  switch (randomNumber) {
+    case 0:
+      return 'rock';
+      break;
+    case 1: 
+      return 'paper';
+      break;
+    case 2:
+      return 'scissors';
+  }
+}
+
+const determineWinner = (userChoice, computerChoice) => {
+  // If user choice is bomb
+  if (userChoice === 'bomb') {
+    return 'Epic! You knew the cheat code. You win!'
+  }
+  // If game is a tie
+  if (userChoice === computerChoice) {
+    return 'The game is a tie!';
+  } // If user choice is rock
+  if (userChoice === 'rock') {
+    if (computerChoice === 'paper') {
+      return 'Computer wins!';
+    } else {
+      return 'You win!';
+    }
+  }
+  // If user choice is paper
+  if (userChoice === 'paper') {
+    if (computerChoice === 'scissors') {
+      return 'Computer wins!';
+    } else {
+      return 'You win!';
+    }
+  }
+  // If user choice is scissors
+  if (userChoice === 'scissors') {
+    if (computerChoice === 'rock') {
+      return 'Computer wins!';
+    } else {
+      return 'You win!';
+    }
+  }
+}
+
+const playGame = () => {
+  const userChoice = getUserChoice('bomb');
+  const computerChoice = getComputerChoice();
+  console.log(`You threw: ${userChoice}`);
+  console.log(`The computer threw: ${computerChoice}`);
+  console.log(determineWinner(userChoice, computerChoice));
+}
+
+playGame()
+
