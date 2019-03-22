@@ -1,0 +1,28 @@
+/* Early adults receive a race number at or above 1000.
+All others receive a number below 1000.
+
+Start time:
+Early adults run at 9:30 am.
+Late adults run at 11:00 am.
+Youth (under 18) registrants run at 12:30 pm (regardless of registration).
+Anyone exactly 18 is sent to the registration desk.*/
+
+let raceNumber = Math.floor(Math.random() * 1000);
+
+let isRegistered = true;
+
+let age = 20;
+
+if (age > 18 && isRegistered === true) {
+  raceNumber += 1000
+} 
+
+if (age > 18 && isRegistered === true) {
+    console.log(`Your race number is ${raceNumber} and you start at 9:30 am.`)
+    } else if (age > 18 && !isRegistered === true) {
+      console.log(`Your race number is ${raceNumber} and you start at 11:00 am.`)
+    } else if (age < 18) {
+      console.log(`Your race number is ${raceNumber} and you start at 12:30 am.`)
+    } else {
+        console.log(`Please see the registration desk.`)
+      }
