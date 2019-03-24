@@ -1,0 +1,35 @@
+/* There are a few simple rules for translating text to whale language:
+
+There are no consonants. Only vowels excluding “y”.
+The u‘s and e‘s are extra long, so we must double them in our program.
+
+'Hello Beautiful World!' translates to 'EEOEEAUUIUUO'
+*/
+
+let input = 'Hello World'; 
+
+let vowels = ['a','e','i','o','u'];
+
+let resultArray = [];
+
+// Compares the text of the input variable to the vowels array to find all the vowels in the input string
+for (let i = 0; i < input.length; i++) {
+  
+// Nested loop checks each letter of input against all the vowels elements during each iteration  
+  for (let j = 0; j < vowels.length; j++) {
+  
+// Compares the input letter to every letter in the vowels array. If they are the same, pushes the letter to resultArray
+   if (input[i] === vowels[j]) {
+      resultArray.push(input[i])
+    }
+  }
+  
+// Checks if each letter in the input string is equal to 'e' or 'u'. If so, pushes the letter to resultArray  
+  if (input[i] === 'e' || input[i] === 'u' ) {
+    resultArray.push(input[i])
+  }
+}
+
+// Joins the result array with no spaces and converts every element to upper case
+console.log(resultArray.join('').toUpperCase())
+  
